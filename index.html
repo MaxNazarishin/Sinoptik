@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="head_in">
+            <div class="text_weather">my weather</div>
+            <div class="search">
+                <input id="input_city" type="text" placeholder="Kyiv">
+                <div class="button">🔍</div>
+            </div>
+            <div id="black_white_style" onclick="blackAndWhite()">color white</div>
+        </div>
+        <div class="navbar">
+            <div class="items_to_select"><a href="#today">Today</a></div>
+            <div class="items_to_select"><a href="#5days">5-day forecast</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="main_block">
+            <div class="tabs__body">
+                <div id="today" class="tabs__block">
+                    <div class="box_main_elem">
+                        <div class="main_elem">
+                            <div class="box_elem1">
+                                <div class="block_color">current weather</div>
+                                <div id="curent_time"></div>
+                            </div>
+                            <div class="box_elem2">
+                                <div class="box_elem2_in">
+                                    <div><img id="weather_icon_elem1"></div>
+                                    <div id="weather_icon_elem2"></div>
+                                </div>
+                                <div class="box_elem2_in">
+                                    <div id="real_temp"></div>
+                                    <div id="feel_temp"></div>
+                                </div>
+                                <div class="box_elem2_in">
+                                    <div id="speed"></div>
+                                    <div id="gust"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_main_elem">
+                        <div class="main_elem">
+                            <div class="block_color">hourly</div>
+                            <div class="grid-container">
+                                <div class="grid-item">TODAY</div>
+                                <div class="grid-item" id="grid_item_2"></div>
+                                <div class="grid-item" id="grid_item_3"></div>
+                                <div class="grid-item" id="grid_item_4"></div>
+                                <div class="grid-item" id="grid_item_5"></div>
+                                <div class="grid-item" id="grid_item_6"></div>
+                                <div class="grid-item" id="grid_item_7"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"><img id="grid_item_9"></div>
+                                <div class="grid-item"><img id="grid_item_10"></div>
+                                <div class="grid-item"><img id="grid_item_11"></div>
+                                <div class="grid-item"><img id="grid_item_12"></div>
+                                <div class="grid-item"><img id="grid_item_13"></div>
+                                <div class="grid-item"><img id="grid_item_14"></div>
+                                <div class="grid-item">Forecast</div>
+                                <div class="grid-item" id="grid_item_16"></div>
+                                <div class="grid-item" id="grid_item_17"></div>
+                                <div class="grid-item" id="grid_item_18"></div>
+                                <div class="grid-item" id="grid_item_19"></div>
+                                <div class="grid-item" id="grid_item_20"></div>
+                                <div class="grid-item" id="grid_item_21"></div>
+                                <div class="grid-item">Temp (°C)</div>
+                                <div class="grid-item" id="grid_item_23"></div>
+                                <div class="grid-item" id="grid_item_24"></div>
+                                <div class="grid-item" id="grid_item_25"></div>
+                                <div class="grid-item" id="grid_item_26"></div>
+                                <div class="grid-item" id="grid_item_27"></div>
+                                <div class="grid-item" id="grid_item_28"></div>
+                                <div class="grid-item">RealFeel</div>
+                                <div class="grid-item" id="grid_item_30"></div>
+                                <div class="grid-item" id="grid_item_31"></div>
+                                <div class="grid-item" id="grid_item_32"></div>
+                                <div class="grid-item" id="grid_item_33"></div>
+                                <div class="grid-item" id="grid_item_34"></div>
+                                <div class="grid-item" id="grid_item_35"></div>
+                                <div class="grid-item">Wind (km/h)</div>
+                                <div class="grid-item" id="grid_item_37"></div>
+                                <div class="grid-item" id="grid_item_38"></div>
+                                <div class="grid-item" id="grid_item_39"></div>
+                                <div class="grid-item" id="grid_item_40"></div>
+                                <div class="grid-item" id="grid_item_41"></div>
+                                <div class="grid-item" id="grid_item_42"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_main_elem">
+                        <div class="main_elem">
+                            <div class="block_color">nearby places</div>
+                            <div class="grid-container_1">
+                                <div class="grid-item_1" id="grid_item_2_1">
+                                    <div class="name_city">Odesa</div>
+                                    <div><img id="weather_Odesa_icon"></div>
+                                    <div id="weather_Odesa_temp"></div>
+                                </div>
+                                <div class="grid-item_1" id="grid_item_2_2">
+                                    <div class="name_city">Cherkasy</div>
+                                    <div><img id="weather_Cherkasy_icon"></div>
+                                    <div id="weather_Cherkasy_temp"></div>
+                                </div>
+                                <div class="grid-item_1" id="grid_item_2_3">
+                                    <div class="name_city">Lviv</div>
+                                    <div><img id="weather_Lviv_icon"></div>
+                                    <div id="weather_Lviv_temp"></div>
+                                </div>
+                                <div class="grid-item_1" id="grid_item_2_4">
+                                    <div class="name_city">Mykolaiv</div>
+                                    <div><img id="weather_Mykolaiv_icon"></div>
+                                    <div id="weather_Mykolaiv_temp"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="5days" class="tabs__block">
+                    <div class="box_main_elem">
+                        <div class="main_elem_5day">
+                            <div class="days5_block"></div>
+                        </div>
+                    </div>
+                    <div class="box_main_elem">
+                        <div class="main_elem">
+                            <div class="block_color">hourly</div>
+                            <div class="grid-container">
+                                <div class="grid-item" id="day_selected"></div>
+                                <div class="grid-item" id="grid2_item_2"></div>
+                                <div class="grid-item" id="grid2_item_3"></div>
+                                <div class="grid-item" id="grid2_item_4"></div>
+                                <div class="grid-item" id="grid2_item_5"></div>
+                                <div class="grid-item" id="grid2_item_6"></div>
+                                <div class="grid-item" id="grid2_item_7"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"><img id="grid2_item_9"></div>
+                                <div class="grid-item"><img id="grid2_item_10"></div>
+                                <div class="grid-item"><img id="grid2_item_11"></div>
+                                <div class="grid-item"><img id="grid2_item_12"></div>
+                                <div class="grid-item"><img id="grid2_item_13"></div>
+                                <div class="grid-item"><img id="grid2_item_14"></div>
+                                <div class="grid-item">Forecast</div>
+                                <div class="grid-item" id="grid2_item_16"></div>
+                                <div class="grid-item" id="grid2_item_17"></div>
+                                <div class="grid-item" id="grid2_item_18"></div>
+                                <div class="grid-item" id="grid2_item_19"></div>
+                                <div class="grid-item" id="grid2_item_20"></div>
+                                <div class="grid-item" id="grid2_item_21"></div>
+                                <div class="grid-item">Temp (°C)</div>
+                                <div class="grid-item" id="grid2_item_23"></div>
+                                <div class="grid-item" id="grid2_item_24"></div>
+                                <div class="grid-item" id="grid2_item_25"></div>
+                                <div class="grid-item" id="grid2_item_26"></div>
+                                <div class="grid-item" id="grid2_item_27"></div>
+                                <div class="grid-item" id="grid2_item_28"></div>
+                                <div class="grid-item">RealFeel</div>
+                                <div class="grid-item" id="grid2_item_30"></div>
+                                <div class="grid-item" id="grid2_item_31"></div>
+                                <div class="grid-item" id="grid2_item_32"></div>
+                                <div class="grid-item" id="grid2_item_33"></div>
+                                <div class="grid-item" id="grid2_item_34"></div>
+                                <div class="grid-item" id="grid2_item_35"></div>
+                                <div class="grid-item">Wind (km/h)</div>
+                                <div class="grid-item" id="grid2_item_37"></div>
+                                <div class="grid-item" id="grid2_item_38"></div>
+                                <div class="grid-item" id="grid2_item_39"></div>
+                                <div class="grid-item" id="grid2_item_40"></div>
+                                <div class="grid-item" id="grid2_item_41"></div>
+                                <div class="grid-item" id="grid2_item_42"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box_main_elem">
+            <div id="main_elem_eror">
+                <div class="not_found">404</div>
+                <div class="not_found_text">
+                    City not found:
+                    <spun id="not_found_input"></spun>
+                </div>
+                <div class="not_found_text">Please enter a different location.</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

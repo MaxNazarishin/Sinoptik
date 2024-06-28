@@ -1,0 +1,285 @@
+body {
+   background-color: rgb(209, 209, 209);
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.text_weather {
+   color: rgb(0, 149, 149);
+   font-weight: 700;
+   font-size: 20px;
+   text-transform: uppercase;
+}
+
+.head_in {
+   display: flex;
+   margin: 10px 20px;
+   justify-content: center;
+}
+
+.navbar {
+   display: flex;
+   justify-content: center;
+   background-color: rgb(64, 64, 64);
+   padding-right: 800px;
+}
+
+.items_to_select {
+   display: flex;
+}
+
+.items_to_select a {
+   color: white;
+   text-decoration: none;
+   padding: 8px 25px;
+   border-left: 1px solid rgb(64, 64, 64);
+   border-right: 1px solid rgb(64, 64, 64);
+   border-bottom: 2px solid rgb(64, 64, 64);
+}
+
+.items_to_select a:hover {
+   border-left: 1px solid rgb(155, 155, 155);
+   border-right: 1px solid rgb(155, 155, 155);
+   border-bottom: 2px solid rgb(12, 178, 178);
+}
+
+#input_city {
+   position: absolute;
+   padding: 3px;
+   border-radius: 5px;
+}
+
+.search {
+   margin-left: 400px;
+   margin-right: 150px;
+}
+
+.search div {
+   margin-left: 148px;
+   filter: grayscale(1);
+}
+
+.search div:hover {
+   cursor: pointer;
+}
+
+.box_main_elem {
+   display: flex;
+   justify-content: center;
+}
+
+.main_elem {
+   width: 1000px;
+   background-color: rgb(186, 186, 186);
+   padding: 25px;
+   margin: 10px 0px;
+   border-radius: 5px;
+}
+
+.main_elem_5day {
+   width: 1050px;
+   margin: 10px 0px;
+}
+
+.box_elem1 {
+   display: flex;
+   justify-content: space-between;
+}
+
+.box_elem2 {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.block_color {
+   color: rgb(0, 116, 116);
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+#curent_time {
+   color: rgb(0, 116, 116);
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.box_elem2_in {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px
+}
+
+.box_elem2_in:first-child {
+   gap: 0px
+}
+
+.box_elem2_in img {
+   width: 60px;
+}
+
+#real_temp {
+   font-size: 40px;
+}
+
+#feel_temp {
+   color: rgb(78, 78, 78);
+   font-size: 14px;
+}
+
+.grid-container {
+   padding: 15px 15px 5px 15px;
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   grid-gap: 20px;
+}
+
+.grid-item {
+   font-size: 18px;
+   text-align: center;
+}
+
+.grid-container_1 {
+   padding: 15px 15px 5px 15px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 12px;
+}
+
+.grid-item_1 {
+   padding: 10px 30px 5px 30px;
+   background-color: rgb(209, 209, 209);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 5px;
+}
+
+.name_city {
+   width: 250px;
+}
+
+.grid-item_1 img {
+   width: 50px;
+}
+
+#main_elem_eror {
+   width: 1000px;
+   background-color: rgb(186, 186, 186);
+   padding: 25px;
+   margin: 10px 0px;
+   border-radius: 5px;
+   display: none;
+}
+
+.not_found {
+   color: rgb(186, 186, 186);
+   text-align: center;
+   font-size: 100px;
+   font-family: 700;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: rgb(78, 78, 78);
+}
+
+#weather_icon_elem2,
+#feel_temp,
+#speed,
+#gust {
+   font-size: 20px;
+}
+
+.not_found_text {
+   color: rgb(78, 78, 78);
+   text-align: center;
+   font-size: 40px;
+   font-family: 700;
+}
+
+#not_found_input {
+   color: red;
+}
+
+.tabs__block {
+   display: none;
+}
+
+.tabs__block:target {
+   display: block;
+}
+
+.days5_block {
+   display: flex;
+   gap: 25px;
+}
+
+.days5_item {
+   background-color: rgb(186, 186, 186);
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding: 25px 20px 25px 20px;
+   border-radius: 5px;
+}
+
+.weather_day {
+   color: rgb(66, 66, 66);
+   font-size: 20px;
+}
+
+.temp_day {
+   font-size: 30px;
+}
+
+.icon_day {
+   width: 80px;
+}
+
+.month_day {
+   color: rgb(66, 66, 66);
+}
+
+.weekday {
+   color: rgb(0, 116, 116);
+   font-size: 25px;
+   font-weight: 700;
+}
+
+.name_city {
+   font-size: 20px;
+}
+
+#weather_Odesa_temp,
+#weather_Cherkasy_temp,
+#weather_Lviv_temp,
+#weather_Mykolaiv_temp {
+   font-size: 20px;
+}
+
+.grid-container img {
+   width: 60px;
+}
+
+#day_selected {
+   font-size: 20px;
+   font-weight: 700;
+}
+
+header {
+   margin-bottom: 10px;
+}
+
+#black_white_style {
+   background-color: rgb(232, 232, 232);
+   padding: 3px;
+   border: 1px solid black;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+#black_white_style:hover {
+   background-color: rgb(181, 181, 181);
+}
